@@ -84,9 +84,9 @@ for i in range(0,len(links1)):
 			aux = vec_ub[i].split("content=\"")
 			aux = aux[1].split("\"")
 			resultado += [aux[0].lstrip()]
-	print(resultado)
+	#print(resultado)
 	with open('lib/output.csv','a') as f:
-		
+		print (len(resultado))
 		f.write(((str(resultado)).replace("[","")).replace("]", ""))
 		f.write("\n")
 		f.close()
