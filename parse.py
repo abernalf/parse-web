@@ -87,7 +87,7 @@ for i in range(0,len(links1)):
 	print(resultado)
 	with open('lib/output.csv','a') as f:
 		
-		f.write(((str(resultado)).replace("[","")).replace("]", "").replace("'", ""))
+		f.write(((str(resultado)).replace("[","")).replace("]", ""))
 		f.write("\n")
 		f.close()
 		resultado = []
