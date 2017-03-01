@@ -1,4 +1,4 @@
-'PARTIDA','FIN,DIFICULTAD','MAPA','DISTANCIA','DURACIÓN','LATITUD','LONGITUD'
+'PARTIDA','FIN','DIFICULTAD','MAPA','DISTANCIA','DURACIÓN','LATITUD','LONGITUD'
 'Centro de Visitantes del Portillo', 'Cuesta de La Fortaleza', 'Baja', 'Lineal', '5,3 km', '1h 45m', '28.304406', '-16.566504'
 'La Rambleta', 'Pico del Teide', 'Media', 'Lineal', '0,6 km', '40m', '28.270391', '-16.638685'
 'La Rambleta', 'Mirador de La Fortaleza', 'Baja', 'Lineal', '0,4 km', '25m', '28.269918', '-16.638831'
