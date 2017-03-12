@@ -13,8 +13,7 @@ print (sys.stdout.encoding)
 def cargar_links():
     expr = "map-data"
 
-    wp = urllib.request.urlopen (
-        "http://www.webtenerife.com/que-hacer/naturaleza/senderismo/senderos/?gclid=CMfX7qWrotICFYc_GwodZi4LyQ&page-index=1&tab-view-mode=listado" )
+    wp = urllib.request.urlopen ("http://www.webtenerife.com/que-hacer/naturaleza/senderismo/senderos/?gclid=CMfX7qWrotICFYc_GwodZi4LyQ&page-index=1&tab-view-mode=listado" )
     pw = wp.read ( ).decode ( wp.headers.get_content_charset ( ) )
 
     res = pw.split ( )
