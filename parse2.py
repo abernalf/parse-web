@@ -79,5 +79,71 @@ for i in range ( 0 , len ( links1 ) ):
             aux = aux[ 1 ].split ( "</td>" )
             resultado += [ aux[ 0 ].lstrip ( ) ]
 
+    for i in range ( 0 , len ( vec_lin ) ):
+        if re.search ( "Permiso/Autorización:" , str ( vec_lin[ i ] ) ):
+            aux = vec_lin[ i ].split ( "class=\"fondogris\">" )
+            aux = aux[ 1 ].split ( "</td>" )
+            resultado += [ aux[ 0 ].lstrip ( ) ]
 
-print (resultado)
+    for i in range ( 0 , len ( vec_lin ) ):
+        if re.search ( "Superficie" , str ( vec_lin[ i ] ) ):
+            aux = vec_lin[ i ].split ( "class=\"fondogris\">" )
+            aux = aux[ 1 ].split ( "</td>" )
+            resultado += [ aux[ 0 ].lstrip ( ) ]
+    for i in range ( 0 , len ( vec_lin ) ):
+        if re.search ( "Accesibilidad para minusválidos:" , str ( vec_lin[ i ] ) ):
+            aux = vec_lin[ i ].split ( "class=\"fondogris\">" )
+            aux = aux[ 1 ].split ( "</td>" )
+            resultado += [ aux[ 0 ].lstrip ( ) ]
+
+    for i in range ( 0 , len ( vec_lin ) ):
+        if re.search ( "Agua" , str ( vec_lin[ i ] ) ):
+            aux = vec_lin[ i ].split ( "class=\"fondogris\">" )
+            aux = aux[ 1 ].split ( "</TD>" )
+            resultado += [ aux[ 0 ].lstrip ( )]
+    for i in range ( 0 , len ( vec_lin ) ):
+        if re.search ( "Electricidad" , str ( vec_lin[ i ] ) ):
+            aux = vec_lin[ i ].split ( "class=\"fondogris\">" )
+            aux = aux[ 1 ].split ( "</TD>" )
+            resultado += [ aux[ 0 ].lstrip ( ) ]
+    for i in range ( 0 , len ( vec_lin ) ):
+        if re.search ( "Duchas" , str ( vec_lin[ i ] ) ):
+            aux = vec_lin[ i ].split ( "class=\"fondogris\">" )
+            aux = aux[ 1 ].split ( "</TD>" )
+            resultado += [ aux[ 0 ].lstrip ( ) ]
+    for i in range ( 0 , len ( vec_lin ) ):
+        if re.search ( "Bar" , str ( vec_lin[ i ] ) ):
+            aux = vec_lin[ i+1 ].split ( "class=\"fondogris\">" )
+            aux = aux[ 1 ].split ( "</TD>" )
+            resultado += [ aux[ 0 ].lstrip ( ) ]
+    for i in range ( 0 , len ( vec_lin ) ):
+        if re.search ( "Comedor" , str ( vec_lin[ i ] ) ):
+            aux = vec_lin[ i ].split ( "class=\"fondogris\">" )
+            aux = aux[ 1 ].split ( "</TD>" )
+            resultado += [ aux[ 0 ].lstrip ( ) ]
+    for i in range ( 0 , len ( vec_lin ) ):
+        if re.search ( "Fogones" , str ( vec_lin[ i ] ) ):
+            aux = vec_lin[ i ].split ( "class=\"fondogris\">" )
+            aux = aux[ 1 ].split ( "</TD>" )
+            resultado += [ aux[ 0 ].lstrip ( ) ]
+    for i in range ( 0 , len ( vec_lin ) ):
+        if re.search ( "Bancos," , str ( vec_lin[ i ] ) ):
+            aux = vec_lin[ i ].split ( "class=\"fondogris\">" )
+            aux = aux[ 1 ].split ( "</TD>" )
+            resultado += [ aux[ 0 ].lstrip ( ) ]
+    for i in range ( 0 , len ( vec_lin ) ):
+        if re.search ( "Aparcamientos" , str ( vec_lin[ i ] ) ):
+            aux = vec_lin[ i ].split ( "class=\"fondogris\">" )
+            aux = aux[ 1 ].split ( "</TD>" )
+            resultado += [ aux[ 0 ].lstrip ( ) ]
+
+
+
+    print (resultado)
+
+    with open ( 'lib/output2.csv' , 'a' ) as f:
+        print (len ( resultado ))
+        f.write ( ((str ( resultado )).replace ( "[" , "" )).replace ( "]" , "" ) )
+        f.write ( "\n" )
+        f.close ( )
+        resultado = [ ]
